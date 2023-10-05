@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:27:22 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/04 12:27:22 by bde-souz         ###   ########.fr       */
+/*   Created: 2023/10/04 15:46:07 by bde-souz          #+#    #+#             */
+/*   Updated: 2023/10/04 15:46:08 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	int		p;
+	char	*str;
 
 	i = 0;
-	while (s[i])
+	str = (char *)s;
+	while (str[i])
 	{
-		if (s[i] == c)
+		if (str[i] == c)
 		{
-			return ((char *)&s[i]);
+			p = i;
 		}
 		i++;
 	}
@@ -27,17 +30,17 @@ char	*ft_strchr(const char *s, int c)
 	{
 		return ((char *)&s[i]);
 	}
-	return (0);
+	return ((char *)&s[p]);
 }
 /*
 #include <string.h>
 #include <stdio.h>
 int main (void)
 {
-    char    str[] = "Vasco da Gama";
-    int     c = '\0';
+    char    str[] = "Vasco do Goma";
+    int     c = 'o';
 
-    printf("%s\n", strchr(str, c));
-    printf("%s\n", ft_strchr(str, c));
+    printf("%s\n", strrchr(str, c));
+    printf("%s\n", ft_strrchr(str, c));
     return (0);
 }*/

@@ -1,43 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:27:22 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/04 12:27:22 by bde-souz         ###   ########.fr       */
+/*   Created: 2023/10/05 11:16:18 by bde-souz          #+#    #+#             */
+/*   Updated: 2023/10/05 11:28:38 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include <string.h>
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
+	int		i;
+	char	*src2;
 
 	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-		{
-			return ((char *)&s[i]);
-		}
+	src2 = (char *)src;
+	dst = src2;
+	while (src[i])
 		i++;
-	}
-	if (c == '\0')
-	{
-		return ((char *)&s[i]);
-	}
-	return (0);
+	size = i;
+	return (size);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int main (void)
-{
-    char    str[] = "Vasco da Gama";
-    int     c = '\0';
 
-    printf("%s\n", strchr(str, c));
-    printf("%s\n", ft_strchr(str, c));
+/*
+#include <stdio.h>
+int     main (int ac, char **av)
+{
+    if (ac < 4)
+        return (printf("\n Falta argumentos :)\n\n"));
+    
+    printf("%ld\n", ft_strlcpy (av[1], av[2], (size_t )av[3]));
     return (0);
 }*/
