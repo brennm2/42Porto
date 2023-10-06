@@ -6,7 +6,7 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:16:18 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/05 11:28:38 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/06 10:03:48 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,34 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int		i;
-	char	*src2;
+	size_t		i;
+	size_t		j;
 
 	i = 0;
-	src2 = (char *)src;
-	dst = src2;
+	j = 0;
 	while (src[i])
 		i++;
-	size = i;
-	return (size);
+	while (src[j] && j < size - 1)
+	{
+		dst[j] = src[j];
+		j++;
+	}
+	dst[j] = '\0';
+	return (i);
 }
 
-/*
-#include <stdio.h>
-int     main (int ac, char **av)
+/* #include <stdio.h>
+#include <bsd/string.h>
+// use -lbsd
+int     main (void)
 {
-    if (ac < 4)
-        return (printf("\n Falta argumentos :)\n\n"));
-    
-    printf("%ld\n", ft_strlcpy (av[1], av[2], (size_t )av[3]));
+	char	dst[] = "vasco";
+	const char	src[] = "gama";
+	size_t	size = 5;
+	
+    //printf("%ld\n", ft_strlcpy(dst, src, size));
+    //printf("%s\n", dst);
+	printf("%ld\n", strlcpy(dst, src, size));
+	printf("%s\n%s\n%ld\n", dst, src, size);
     return (0);
-}*/
+} */
