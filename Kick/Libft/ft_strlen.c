@@ -6,11 +6,13 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:47:51 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/03 11:47:58 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:30:34 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(char *str)
 {
 	int	i;
 

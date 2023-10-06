@@ -6,9 +6,11 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:46:07 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/04 15:46:08 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:31:19 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

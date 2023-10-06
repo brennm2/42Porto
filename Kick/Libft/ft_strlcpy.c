@@ -6,42 +6,41 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:16:18 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/06 10:03:48 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:08:02 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t		i;
 	size_t		j;
+	int			len;
 
 	i = 0;
 	j = 0;
-	while (src[i])
-		i++;
+	len = ft_strlen((char *)src);
+	if (size == 0)
+		return (len);
 	while (src[j] && j < size - 1)
-	{
-		dst[j] = src[j];
-		j++;
-	}
+		dst[j++] = src[i++];
 	dst[j] = '\0';
-	return (i);
+	return (len);
 }
-
-/* #include <stdio.h>
+/*
+#include <stdio.h>
 #include <bsd/string.h>
 // use -lbsd
 int     main (void)
 {
-	char	dst[] = "vasco";
-	const char	src[] = "gama";
-	size_t	size = 5;
+	char	dst[] = "ABCDEF";
+	const char	src[] = "ZXS";
+	size_t	size = 3;
 	
-    //printf("%ld\n", ft_strlcpy(dst, src, size));
-    //printf("%s\n", dst);
-	printf("%ld\n", strlcpy(dst, src, size));
-	printf("%s\n%s\n%ld\n", dst, src, size);
+    printf("%ld\n", ft_strlcpy(dst, src, size));
+    printf("%s\n", dst);
+	//printf("%ld\n", strlcpy(dst, src, size));
+	//printf("%s\n%s\n%ld\n", dst, src, size);
     return (0);
 } */
