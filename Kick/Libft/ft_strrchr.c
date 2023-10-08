@@ -14,35 +14,31 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
-	int		p;
-	char	*str;
+	int		len;
 
-	i = 0;
-	str = (char *)s;
-	while (str[i])
+	len = 0;
+	while (s[len])
+		len++;
+	while (len >= 0)
 	{
-		if (str[i] == c)
-		{
-			p = i;
-		}
-		i++;
+		if (s[len] == (unsigned char)c)
+			return ((char *)&s[len]);
+		len--;
 	}
-	if (c == '\0')
-	{
-		return ((char *)&s[i]);
-	}
-	return ((char *)&s[p]);
+	if ((unsigned char)c == '\0')
+		return ((char *)&s[len]);
+	return (NULL);
 }
 /*
 #include <string.h>
 #include <stdio.h>
 int main (void)
 {
-    char    str[] = "Vasco do Goma";
-    int     c = 'o';
+    const char    str[] = "pepe y cparlos";
+    int    c = 'c';
 
-    printf("%s\n", strrchr(str, c));
-    printf("%s\n", ft_strrchr(str, c));
+	//strrchr(str, c);
+    printf("%s \n", strrchr(str, c));
+    printf("%s \n", ft_strrchr(str, c));
     return (0);
 }*/

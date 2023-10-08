@@ -19,17 +19,17 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 		{
 			return ((char *)&s[i]);
 		}
 		i++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 	{
 		return ((char *)&s[i]);
 	}
-	return (0);
+	return (NULL);
 }
 /*
 #include <string.h>
@@ -37,9 +37,9 @@ char	*ft_strchr(const char *s, int c)
 int main (void)
 {
     char    str[] = "Vasco da Gama";
-    int     c = '\0';
+    int     c = 1024;
 
-    printf("%s\n", strchr(str, c));
-    printf("%s\n", ft_strchr(str, c));
+    printf("Função Original: %s\n", strchr(str, c));
+    printf("Função Criada: %s\n", ft_strchr(str, c));
     return (0);
 }*/
