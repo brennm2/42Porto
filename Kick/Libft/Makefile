@@ -23,7 +23,10 @@ OBJ = ft_isalnum.o \
 	ft_strrchr.o \
 	ft_tolower.o \
 	ft_toupper.o \
-	ft_bzero.o
+	ft_bzero.o \
+	ft_memcpy.o \
+	ft_memmove.o \
+	ft_memchr.o
 
 all: $(NAME)
 
