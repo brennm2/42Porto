@@ -1,43 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 17:19:13 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/10 11:56:14 by bde-souz         ###   ########.fr       */
+/*   Created: 2023/10/10 09:37:48 by bde-souz          #+#    #+#             */
+/*   Updated: 2023/10/10 10:54:56 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	unsigned int	i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	while (i < n)
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while (i < n - 1)
 	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	return (dest);
+	return (str1[i] - str2[i]);
 }
-/*
+/* 
 #include <stdio.h>
 #include <string.h>
 
 int main(void)
 {
-    char    dest[] = "";
-    char    src[] = "segfaulter tu dois";
-    size_t  n   = 17;
+	unsigned int	n = 7;
+	unsigned char	s1[] = "abcdefghij";
+	unsigned char	s2[] = "abcdefgxyz";
 
-    printf("%s\n", (char *)ft_memcpy(dest, src, n));
-    //printf("%s\n", (char *)ft_memcpy("", "segfaulter tu dois", 17));
-    //printf("%s\n", (char *)memcpy(dest, src, n));
-    return (0);
+	printf("Criada: %d\n", ft_memcmp(s1, s2, n));
+	printf("Original: %d\n", memcmp(s1, s2, n));
+	return (0);
 } */

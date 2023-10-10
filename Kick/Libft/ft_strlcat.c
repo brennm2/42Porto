@@ -6,7 +6,7 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:31:49 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/09 17:15:11 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/10 15:10:25 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,37 +15,47 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t		lendst;
+	size_t		lenstr;
 	size_t		i;
+	size_t		templen;
 
 	i = 0;
 	lendst = ft_strlen(dst);
-	//if (size > lendst)
-	//	return (lendst);
-	while(src[i] && i < size)
+	lenstr = ft_strlen((char *)src);
+	templen = ft_strlen(dst);
+	if (!dst && !src)
+		return (0);
+	if (size <= lendst)
+		return (lenstr + size);
+	size = size - lendst;
+	while (i < size - 1 && src[i])
 	{
-		dst[lendst++] = src[i++];
+		dst[lendst] = src[i];
+		i++;
+		lendst++;
 	}
 	dst[lendst] = '\0';
-	return (lendst);
-
+	return (templen + lenstr);
 }
-/* 
+/*  
 #include <stdio.h>
 //#include <bsd/string.h>
 // use -lbsd
 int     main (void)
 {
-	//char	dst[] = "vasco";
-	//const char	src[] = "gama";
-	//size_t	size = 0;
+	// char	dst[14] = "a";
+	// const char	src[] = "lorem ipsum dolor sit amet";
+	// size_t	size = 15;
 	
-	char	dst2[] = "vasco";
-	const char	src2[] = "gama";
-	size_t	size2 = 2;
+	char	dst2[14] = "a";
+	const char	src2[] = "lorem ipsum dolor sit amet";
+	int	size2 = -1;
 
     printf("Retorno da ft_criada: %ld\n", ft_strlcat(dst2, src2, size2));
+	printf("%s\n", dst2);
     //printf("%s\n", dst2);
 	//printf("Retorno da ft_original: %ld\n", strlcat(dst, src, size));
 	//printf("%s\n%s\n%ld\n", dst, src, size);
+	//printf("%s\n", dst);
     return (0);
-}  */
+} */
