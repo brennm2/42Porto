@@ -29,7 +29,9 @@ OBJ = ft_isalnum.o \
 	ft_memchr.o \
 	ft_memcmp.o \
 	ft_strnstr.o \
-	ft_atoi.o
+	ft_atoi.o	\
+	ft_strdup.o \
+	ft_calloc.o
 
 all: $(NAME)
 
