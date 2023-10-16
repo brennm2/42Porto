@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:46:04 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/11 11:23:14 by bde-souz         ###   ########.fr       */
+/*   Created: 2023/10/16 09:54:06 by bde-souz          #+#    #+#             */
+/*   Updated: 2023/10/16 09:54:49 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Description: --------------------------------------
+// Outputs the string ’s’ to the given file descriptor
+// followed by a newline.
+
 #include "libft.h"
 
-void	*ft_calloc(size_t n, size_t size)
+void	ft_putendl_fd(char *s, int fd)
 {
-	void	*s;
+	int		i;
 
-	s = malloc(n * size);
-	if (!s)
-		return (NULL);
-	ft_bzero(s, n * size);
-	return (s);
+	i = 0;
+	while (s[i])
+	{
+		write (fd, &s[i], 1);
+		i++;
+	}
+	write (fd, "\n", 1);
 }
 /* 
-#include <stdlib.h>
-#include <stdio.h>
 
 int main(void)
 {
-    printf("%s\n", (char *)ft_calloc(5, 5));
-    printf("%s\n", (char *)calloc(5, 5));
+    ft_putendl_fd("Vasco da Gama", 1);
     return (0);
 } */

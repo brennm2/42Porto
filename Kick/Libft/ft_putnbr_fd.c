@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:46:04 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/11 11:23:14 by bde-souz         ###   ########.fr       */
+/*   Created: 2023/10/16 10:13:35 by bde-souz          #+#    #+#             */
+/*   Updated: 2023/10/16 10:15:57 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Description -----------------------------
+// Outputs the integer ’n’ to the given file
+// descriptor.
+
 #include "libft.h"
 
-void	*ft_calloc(size_t n, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	void	*s;
+	int long		i;
 
-	s = malloc(n * size);
-	if (!s)
-		return (NULL);
-	ft_bzero(s, n * size);
-	return (s);
+	i = n;
+	if (i < 0)
+	{
+		ft_putchar_fd('-', fd);
+		i = i * -1;
+	}
+	if (i >= 10)
+		ft_putnbr_fd ((i / 10), fd);
+	ft_putchar_fd (i % 10 + '0', fd);
 }
 /* 
-#include <stdlib.h>
-#include <stdio.h>
-
 int main(void)
 {
-    printf("%s\n", (char *)ft_calloc(5, 5));
-    printf("%s\n", (char *)calloc(5, 5));
+    ft_putnbr_fd(2, 1);
     return (0);
 } */

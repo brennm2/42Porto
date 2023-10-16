@@ -6,7 +6,7 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 11:58:04 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/10 11:58:56 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/16 09:48:50 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/* 
-#include <bsd/string.h>
-#include <stdio.h>
 
-int main(void)
-{
-	const char big[] = "";
-	const char little[] = "coucou";
+// #include <bsd/string.h>
+// #include <stdio.h>
 
-	printf("%s\n", ft_strnstr(big, little, -1));
-	printf("%s\n", strnstr(big, little, -1));
-	return (0);
-} */
+// int main(void)
+// {
+// 	const char big[] = "Vasco da gama";
+// 	const char little[] = "da";
+
+// 	printf("%s\n", ft_strnstr(big, little, 10));
+// 	printf("%s\n", strnstr(big, little, 10));
+// 	return (0);
+// }
