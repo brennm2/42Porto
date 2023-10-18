@@ -44,6 +44,12 @@ OBJ = ft_isalnum.o \
 	ft_striteri.o \
 	ft_itoa.o
 
+
+OBJ_BONUS = ft_lstnew_bonus.o \
+	ft_lstadd_front_bonus.o \
+	ft_lstlast_bonus.o
+
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -53,9 +59,12 @@ $(NAME): $(OBJ)
 	$(CC) $(CCFLAGS) -o $@ -c $<
 
 clean:
-	$(RM) $(RMFLAGS) $(OBJ)
+	$(RM) $(RMFLAGS) $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	$(RM) $(RMFLAGS) $(NAME)
+
+bonus: $(OBJ) $(OBJ_BONUS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJ) $(OBJ_BONUS)
 
 re: fclean all

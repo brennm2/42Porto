@@ -6,7 +6,7 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:49:19 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/16 14:22:44 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/18 11:41:21 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 // int main (void)
 // {
-// 	printf("%s\n", ft_strmapi("123", addOne + 1));
+// 	printf("%s\n", ft_strmapi("123", addOne));
 // }
