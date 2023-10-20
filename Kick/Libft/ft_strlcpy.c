@@ -6,17 +6,21 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:16:18 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/09 17:18:13 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:41:53 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO --------------------------------------------------------
+// Copia e concatenar cadeias de caracteres respectivamente
+// Retorna o tamanho da 'src'
 
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t		i;
-	size_t		j;
-	int			len;
+	size_t	i;
+	size_t	j;
+	int		len;
 
 	i = 0;
 	j = 0;
@@ -29,8 +33,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (len);
 }
 /*
-#include <stdio.h>
 #include <bsd/string.h>
+#include <stdio.h>
+
 // use -lbsd
 int     main (void)
 {

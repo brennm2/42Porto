@@ -6,9 +6,13 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:27:22 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/09 09:22:00 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:25:22 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO -------------------------------------------------------
+// A função strchr() retorna um ponteiro para o primeira ocorrência
+// do caractere 'c' nas cadeias de caracteres 's'.
 
 #include "libft.h"
 
@@ -32,8 +36,9 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 /*
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+
 int main (void)
 {
     char    str[] = "Vasco da Gama";

@@ -6,15 +6,13 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 11:23:43 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/16 13:02:38 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 13:04:44 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Description: ------------------------------------
-// Allocates (with malloc(3)) and returns a substring
-// from the string ’s’.
-// The substring begins at index ’start’ and is of
-// maximum size ’len’.
+// DESCRIÇÃO -------------------------------------------------------
+// Aloca (com malloc(3)) e retorna uma substring da string 's'.
+// A substring começa no índice 'start' e é de tamanho máximo 'len'.
 
 #include "libft.h"
 

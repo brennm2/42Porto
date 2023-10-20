@@ -6,9 +6,12 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:24:41 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/18 14:31:15 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:56:52 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO: -------------------------------
+// Adiciona um node 'novo' no início da lista.
 
 #include "libft.h"
 

@@ -6,9 +6,14 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:48:55 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/09 09:21:10 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:51:04 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO -----------------------------------------------------------
+// A função strcmp() compara as duas cadeias de caracteres 's1' e 's2'.
+// A localidade não é levada em conta.
+// A comparação é feita usando unsigned characters.
 
 #include "libft.h"
 

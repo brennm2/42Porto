@@ -6,16 +6,20 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:58:20 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/06 12:24:04 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:00:36 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO -----------------------------------------------
+// A função memset() preenche os primeiros n bytes
+// da área de memória apontada por s com a constante byte c.
 
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t		i;
-	char		*str;
+	size_t	i;
+	char	*str;
 
 	i = 0;
 	str = (char *)s;
@@ -27,10 +31,11 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (str);
 }
 /*
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-int main(void)
+
+int	main(void)
 {
     char    str[] = "Vasco da Gama";
     int     c = '-';

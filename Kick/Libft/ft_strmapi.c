@@ -6,25 +6,24 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:49:19 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/18 11:41:21 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:50:59 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Description ---------------------------------------
-// Applies the function ’f’ to each character of the
-// string ’s’, and passing its index as first argument
-// to create a new string (with malloc(3)) resulting
-// from successive applications of ’f’
+// DESCRIÇÃO -------------------------------------------------------------
+// Aplica a função 'f' a cada caractere da string 's', passando seu índice
+// como primeiro argumento para criar uma nova cadeia de caracteres
+// (com malloc(3)) resultante de aplicações sucessivas de 'f'.
 
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int		i;
-	char				*str;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
-	str = (char *)malloc (sizeof(char) * (ft_strlen(s) + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (0);
 	while (s[i])
@@ -44,7 +43,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // 	return (c);
 // }
 
-// char addOne(unsigned int i, char c) 
+// char addOne(unsigned int i, char c)
 // {
 // 	return (i + c);
 // }

@@ -6,9 +6,12 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 10:58:45 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/06 12:36:40 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:56:44 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO: --------------------------
+// Verifica se há um caractere alfanumérico
 
 #include "libft.h"
 
@@ -22,6 +25,7 @@ int	ft_isalnum(int c)
 }
 /*
 #include <stdio.h>
+
 int main (void)
 {
     char   ch = '5';

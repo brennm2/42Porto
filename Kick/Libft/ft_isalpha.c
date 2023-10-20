@@ -6,9 +6,12 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 10:30:04 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/06 12:27:22 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:56:47 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO: ---------------------------
+// Verifica se há um caractere alfabético
 
 #include "libft.h"
 
@@ -20,6 +23,7 @@ int	ft_isalpha(int c)
 }
 /*
 #include <stdio.h>
+
 int main (void)
 {
     char   ch = 'A';

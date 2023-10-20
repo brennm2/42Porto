@@ -6,22 +6,25 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:06:37 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/10 15:10:00 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:56:39 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Description: ---------------------------------------------------
+// A função atoi() converte a parte inicial da string *s para int.
 
 #include "libft.h"
 
 int	ft_atoi(const char *s)
 {
-	int		i;
-	int		sinal;
-	int		numero;
+	int	i;
+	int	sinal;
+	int	numero;
 
 	i = 0;
 	sinal = 1;
 	numero = 0;
-	while (((char *)s)[i] == 32 || 
+	while (((char *)s)[i] == 32 ||
 			(((char *)s)[i] >= 9 && ((char *)s)[i] <= 13))
 		i++;
 	while (((char *)s)[i] == '+' || ((char *)s)[i] == '-')
@@ -42,8 +45,8 @@ int	ft_atoi(const char *s)
 }
 
 /* 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main (void)
 {

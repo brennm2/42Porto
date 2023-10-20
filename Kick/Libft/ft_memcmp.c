@@ -6,9 +6,14 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 09:37:48 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/10 10:54:56 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:56:57 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO: -----------------------------------------
+// A função memcmp() compara os primeiros n bytes
+// (cada um interpretado como unsigned char)
+// das áreas de memória s1 e s2.
 
 #include "libft.h"
 
@@ -35,7 +40,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
 	unsigned int	n = 7;
 	unsigned char	s1[] = "abcdefghij";

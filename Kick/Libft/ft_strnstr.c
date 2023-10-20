@@ -6,9 +6,15 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 11:58:04 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/16 09:48:50 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:58:41 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO ----------------------------------------------------------------
+// A função strnstr() localiza a primeira ocorrência da cadeia de caracteres
+// terminada em nulo na cadeia de caracteres 'little' na cadeia de caracteres
+// 'big', onde não mais do que 'len' caracteres são pesquisados.
+// Os caracteres que aparecem depois de '\0' não são pesquisados.
 
 #include "libft.h"
 

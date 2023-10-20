@@ -6,9 +6,12 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:37:46 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/09 09:35:41 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:56:50 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO: -------------------------------------------------
+// verifica se há qualquer caractere imprimível, incluindo espaço.
 
 #include "libft.h"
 
@@ -20,7 +23,8 @@ int	ft_isprint(int c)
 }
 /*
 #include <stdio.h>
-int     main(void)
+
+int	main(void)
 {
     char    n = 124;
     printf("%d\n", ft_isprint(n));

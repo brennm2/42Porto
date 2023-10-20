@@ -6,9 +6,13 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:19:13 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/10 11:56:14 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:57:56 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO: -------------------------------------------------------------
+// A função memcpy() copia n bytes da área da memória de src para área da
+// memória de dest. As áreas de memória não devem sobrepor.
 
 #include "libft.h"
 
@@ -30,7 +34,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
     char    dest[] = "";
     char    src[] = "segfaulter tu dois";

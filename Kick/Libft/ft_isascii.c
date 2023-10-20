@@ -6,9 +6,13 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:27:53 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/06 12:27:30 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:56:48 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO: --------------------------------------------
+// Verifica se C é um valor de unsigned char de 7 bits
+// que se ajusta no conjunto de caracteres ASCII.
 
 #include "libft.h"
 
@@ -20,7 +24,8 @@ int	ft_isascii(int c)
 }
 /*
 #include <stdio.h>
-int     main(void)
+
+int	main(void)
 {
     unsigned char    ch = 219;
     printf("%d\n", ft_isascii(ch));

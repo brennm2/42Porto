@@ -6,19 +6,18 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:37:02 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/16 09:53:11 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:08:24 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Description -------------------------------
-// Outputs the character ’c’ to the given file
-// descriptor.
+// DESCRIÇÃO ----------------------------------------------------------
+// Gera a saída do caractere 'c' para o descritor de arquivo fornecido.
 
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (s[i])
@@ -30,7 +29,7 @@ void	ft_putstr_fd(char *s, int fd)
 /* 
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
     ft_putstr_fd("Vasco da Gama", 1);
     return (0);

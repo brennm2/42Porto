@@ -6,19 +6,21 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:46:07 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/09 09:19:59 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 13:01:41 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO ----------------------------------------------------------------
+// A função strrchr() retorna um ponteiro para o última ocorrência do
+// caractere 'c' nas cadeias de caracteres 's'.
 
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		len;
+	int	len;
 
-	len = 0;
-	while (s[len])
-		len++;
+	len = ft_strlen(s);
 	while (len >= 0)
 	{
 		if (s[len] == (unsigned char)c)
@@ -30,8 +32,9 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 /*
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+
 int main (void)
 {
     const char    str[] = "pepe y cparlos";

@@ -6,20 +6,20 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 09:45:40 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/16 10:40:26 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 13:02:55 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Description ---------------------------------------
-// Allocates (with malloc(3)) and returns a copy of
-// ’s1’ with the characters specified in ’set’ removed
-// from the beginning and the end of the string.
+// DESCRIÇÃO ------------------------------------------------
+// Aloca (com malloc(3)) e retorna uma cópia de
+// 's1' com os caracteres especificados em 'set' removidos
+// do início e do fim da string.
 
 #include "libft.h"
 
 static int	ft_is_set(char c, const char *set)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (set[i])

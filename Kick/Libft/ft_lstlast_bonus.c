@@ -6,9 +6,12 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:43:28 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/18 15:41:21 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 11:56:53 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO: --------------------
+// Retorna o último node da lista.
 
 #include "libft.h"
 

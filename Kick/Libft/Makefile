@@ -47,7 +47,13 @@ OBJ = ft_isalnum.o \
 
 OBJ_BONUS = ft_lstnew_bonus.o \
 	ft_lstadd_front_bonus.o \
-	ft_lstlast_bonus.o
+	ft_lstlast_bonus.o \
+	ft_lstsize_bonus.o \
+	ft_lstadd_back_bonus.o \
+	ft_lstdelone_bonus.o \
+	ft_lstclear_bonus.o \
+	ft_lstiter_bonus.o \
+	ft_lstmap_bonus.o
 
 
 all: $(NAME)

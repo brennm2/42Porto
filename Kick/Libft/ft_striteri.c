@@ -6,13 +6,19 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:22:15 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/16 14:25:40 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:25:22 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// DESCRIÇÃO -----------------------------------------------------------------
+// Aplica a função 'f' em cada caractere da cadeia de caracteres passado como
+// argumento, passando seu índice como primeiro argumento.
+// Cada caractere é passado por endereço para 'f' para ser modificado
+// se necessário.
+
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 

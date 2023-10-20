@@ -6,9 +6,13 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:05:08 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/06 12:29:42 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 13:06:50 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO --------------------------------------------
+// Se c for uma letra minúscula, toupper() retornará seu
+// equivalente em maiúsculas.
 
 #include "libft.h"
 
@@ -20,7 +24,8 @@ int	ft_toupper(int c)
 }
 /*
 #include <stdio.h>
-int main(int ac, char **av)
+
+int	main(int ac, char **av)
 {
     int i;
 

@@ -6,9 +6,13 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:14:38 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/13 16:15:33 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:17:37 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// DESCRIÇÃO -------------------------------------------------------------
+// Aloca (com malloc(3)) e retorna uma nova string, que é o resultado da
+// concatenação de 's1' e 's2'.
 
 #include "libft.h"
 
