@@ -6,7 +6,7 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:13:23 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/19 19:23:24 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/20 14:31:16 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,6 @@ static int	ft_freemalloc(char **tab, int k)
 	free(tab);
 	return (0);
 }
-static void	**ft_print(const char *s, char **tab, int i, int j, int k)
-{
-	tab[k] = malloc(sizeof(char) * (i - j + 1));
-	if (!tab[k])
-		ft_freemalloc(&tab[k], k);
-	ft_strlcpy(tab[k++], &s[j], i - j + 1);
-	return (0);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
@@ -72,13 +63,12 @@ char	**ft_split(char const *s, char c)
 		while (s[i] != c && s[i])
 			i++;
 		if (i > j)
-			ft_print(s, &tab[k], i, j, k);
-		// {
-		// 	tab[k] = malloc(sizeof(char) * (i - j + 1));
-		// 	if (!tab[k])
-		// 		ft_freemalloc(&tab[k], k);
-		// 	ft_strlcpy(tab[k++], &s[j], i - j + 1);
-		// }
+		{
+			tab[k] = malloc(sizeof(char) * (i - j + 1));
+			if (!tab[k])
+				ft_freemalloc(&tab[k], k);
+			ft_strlcpy(tab[k++], &s[j], i - j + 1);
+		}
 	}
 	tab[k] = NULL;
 	return (tab);
@@ -86,7 +76,9 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	char ** str = ft_split("Vasco da Gama", ' ');
+// 	char	**str;
+
+// 	str = ft_split("hello!", ' ');
 // 	while (*str)
 // 		printf("%s\n", *str++);
 // }
