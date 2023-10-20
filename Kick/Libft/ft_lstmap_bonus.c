@@ -6,7 +6,7 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:17:22 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/10/20 14:53:24 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/10/20 20:50:16 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ static void	*ft_clear(t_list *lst, void *content, void (*del)(void *))
 	ft_lstclear(&lst, del);
 	return (NULL);
 }
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlst;
