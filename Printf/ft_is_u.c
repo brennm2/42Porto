@@ -6,7 +6,7 @@
 /*   By: bde-souz <bde-souz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 09:33:24 by bde-souz          #+#    #+#             */
-/*   Updated: 2023/11/03 10:57:50 by bde-souz         ###   ########.fr       */
+/*   Updated: 2023/11/03 13:23:31 by bde-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 int	ft_is_u(unsigned int n, int i)
 {
-	unsigned long	num;
-
-	num = n;
-	if (num > 9)
+	if (n > 9)
 	{
-		i = ft_is_d(num / 10, i);
+		i = ft_is_d(n / 10, i);
 	}
-	i = ft_is_c(num % 10 + '0', i);
+	i = ft_is_c(n % 10 + '0', i);
 	return (i);
 }
